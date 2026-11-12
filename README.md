@@ -107,3 +107,22 @@ its exit status: an earlier snapshot can remain on disk after a setup failure an
 mistaken for a fresh result. It writes snapshots with owner-only permissions. See Spotify's
 [comment moderation information](https://support.spotify.com/us/creators/article/comment-settings/)
 for the distinction between published comments and comments awaiting review.
+
+## Comments on a YouTube source video
+
+If an episode is inspired by a YouTube video, collect a bounded sample of that specific video's
+public comments before drafting. Install [yt-dlp](https://github.com/yt-dlp/yt-dlp) separately.
+Pass the selected video's 11-character ID, and keep the resulting file outside the repository:
+
+~~~sh
+podcast-source-feedback VIDEO_ID --output /private/path/source-feedback.json
+~~~
+
+The command can accept several video IDs and defaults to at most 100 comments per video (adjust
+with `--max-comments`, up to 200). It does not download video or audio. It saves comment text,
+video provenance, timestamps and thread IDs, but not author names or profiles. Like the Spotify
+snapshot, it is private untrusted input for the episode producer to evaluate, not a collection of
+verified facts or instructions. YouTube's count and its returned comments can differ; an incomplete
+sample is flagged, and an inaccessible feed is reported as an error rather than as zero comments.
+Check the command status and the snapshot's collection time before using it. This step does not
+post replies or modify the YouTube video.
