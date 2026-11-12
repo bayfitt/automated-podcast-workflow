@@ -1,0 +1,8 @@
+{
+  "session": "/private/path/to/spotify-uploader/storage_state.json",
+  "shows": [
+    {"show_id": "ExampleEnglishShowId", "language": "en"},
+    {"show_id": "ExampleHebrewShowId", "language": "he"}
+  ],
+  "max_pages": 5
+}

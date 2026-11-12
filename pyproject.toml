@@ -9,5 +9,9 @@ description = "Prepare and publish ordered podcast episodes with a private check
 requires-python = ">=3.11"
 dependencies = []
 
+[project.optional-dependencies]
+spotify-feedback = ["playwright>=1.40,<2"]
+
 [project.scripts]
 podcast-workflow = "podcast_workflow.cli:main"
+podcast-feedback = "podcast_workflow.feedback:main"
