@@ -1,0 +1,20 @@
+{
+  "episodes": [
+    {
+      "language": "en",
+      "show_id": "ENGLISH_SHOW_ID",
+      "title": "Example English episode",
+      "audio": "../private/episode-en.mp3",
+      "description": "../private/description-en.txt",
+      "artwork": "../private/cover-en.png"
+    },
+    {
+      "language": "he",
+      "show_id": "HEBREW_SHOW_ID",
+      "title": "Example Hebrew episode",
+      "audio": "../private/episode-he.mp3",
+      "description": "../private/description-he.txt",
+      "artwork": "../private/cover-he.png"
+    }
+  ]
+}
